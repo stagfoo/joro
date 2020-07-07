@@ -1,0 +1,30 @@
+{
+  "name": "joro",
+  "version": "1.0.0",
+  "description": "confirm tags are mounted in the dom",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stagfoo/joro.git"
+  },
+  "keywords": [
+    "strings",
+    "css",
+    "jss",
+    "simple",
+    "tiny",
+    "frontend"
+  ],
+  "author": "stagfoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stagfoo/joro/issues"
+  },
+  "homepage": "https://github.com/stagfoo/joro#readme",
+  "devDependencies": {
+    "tsc": "^1.20150623.0"
+  }
+}
