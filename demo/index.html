@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+    <script src="index.js"></script>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <p>
+      Testing 1 2 3
+    </p>
+    <button onclick="addStyles()">
+      Add Styles
+    </button>
+    <button onclick="removeStyles()">
+        remove Styles
+      </button>
+    <script>
+        var web = new joro()
+
+        function addStyles(){
+        web.add("body_styles", `
+            body { 
+                background: #000;
+                color: #8D58FD
+            }
+        `)
+        }
+        function removeStyles(){
+            web.remove("body_styles", true)
+        }
+    </script>
+  </body>
+</html>

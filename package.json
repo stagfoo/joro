@@ -4,7 +4,8 @@
   "description": "confirm tags are mounted in the dom",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "webpack-dev-server --content-base dist --hot --inline --mode=development"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/stagfoo/joro#readme",
   "devDependencies": {
-    "tsc": "^1.20150623.0"
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.0.3"
   }
 }
