@@ -1,6 +1,6 @@
 {
   "name": "joro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "confirm tags are mounted in the dom",
   "main": "src/index.js",
   "scripts": {
