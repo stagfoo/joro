@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Hello!</title>
     <script src="index.js"></script>
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <p>
-      Testing 1 2 3
-    </p>
-    <button onclick="addStyles()">
-      Add Styles
-    </button>
-    <button onclick="removeStyles()">
-        remove Styles
-      </button>
-    <script>
-        var web = new joro()
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
 
-        function addStyles(){
-        web.add("body_styles", `
+    <style>
+      * {
+        font-family: "Courier Prime", monospace;
+      }
+
+      div,
+      h1 {
+        font-size: 48px;
+        display: block;
+        margin: 20vw auto 0 auto;
+        width: 300px;
+      }
+      div {
+        margin-top: 0;
+        text-align:center;
+      }
+      #spider {
+          width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="spider">
+      <pre>
+  ,-,
+/∞|<\
+</pre
+      >
+    </h1>
+    <div>
+      <button onclick="addStyles()">
+        Add Node
+      </button>
+      <button onclick="removeStyles()">
+        Remove Node
+      </button>
+    </div>
+
+    <script>
+      var web = new joro();
+
+      function addStyles() {
+        web.add(
+          "body_styles",
+          `
             body { 
                 background: #000;
                 color: #8D58FD
             }
-        `)
-        }
-        function removeStyles(){
-            web.remove("body_styles", true)
-        }
+        `
+        );
+      }
+      function removeStyles() {
+        web.remove("body_styles", true);
+      }
     </script>
   </body>
 </html>

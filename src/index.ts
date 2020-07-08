@@ -46,3 +46,9 @@ function remove(key: string, unrender = false){
     }
 }
 }
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+	module.exports = joro;
+} else {
+	window['joro'] = joro;
+}
