@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-      "baseUrl": "./src",
-      "target": "es6",
-      "paths": {
-            "*": ["*"]
-          },
-      "lib": [ "dom", "esnext" ],
-      "allowSyntheticDefaultImports": true,
-      "module": "esnext",
-      "declaration": false,
-      "experimentalDecorators": true,
-      "moduleResolution": "node"
-    },
-    "exclude": [
-      "node_modules"
-    ]
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "outDir": "./dist",
+  },
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

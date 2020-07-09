@@ -1,9 +1,6 @@
 function joro() {
     this.registry = {};
-    this.render = render,
-        this.add = add;
-    this.remove = remove;
-    function render(key, custom = null) {
+    this.render = (key, custom = null) => {
         if (isNotRegistered(key)) {
             const inner = this.registry[key];
             if (custom instanceof HTMLElement) {
@@ -16,7 +13,21 @@ function joro() {
                 document.head.appendChild(node);
             }
         }
-    }
+    },
+        this.add = (key, inner, render = true) => {
+            if (this.registry[key] === undefined) {
+                this.registry[key] = inner;
+                if (render) {
+                    this.render(key);
+                }
+            }
+        };
+    this.remove = (key, unrender = false) => {
+        delete this.registry[key];
+        if (unrender) {
+            document.getElementById(key).remove();
+        }
+    };
     function makeStylesheet(key, inner) {
         const styleNode = document.createElement("style");
         styleNode.type = "text/css";
@@ -26,20 +37,6 @@ function joro() {
     }
     function isNotRegistered(key) {
         return document.getElementById(key) == null;
-    }
-    function add(key, inner, render = true) {
-        if (this.registry[key] === undefined) {
-            this.registry[key] = inner;
-            if (render) {
-                this.render(key);
-            }
-        }
-    }
-    function remove(key, unrender = false) {
-        delete this.registry[key];
-        if (unrender) {
-            document.getElementById(key).remove();
-        }
     }
 }
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
