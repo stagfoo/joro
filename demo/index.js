@@ -1,46 +1,35 @@
 function joro() {
     this.registry = {};
-    this.render = render,
-        this.add = add;
-    this.remove = remove;
-    function render(key, custom = null) {
-        if (isNotRegistered(key)) {
+    this.getElement = (key) => {
+        return document.querySelector(`[data-joro-id=${key}]`);
+    };
+    this.render = (key, custom = null) => {
+        if (this.isNotRendered(key)) {
             const inner = this.registry[key];
             if (custom instanceof HTMLElement) {
-                custom.id = key;
+                custom.dataset.joroId = key;
                 custom.innerHTML = inner;
                 document.head.appendChild(custom);
             }
-            else {
-                const node = makeStylesheet(key, inner);
-                document.head.appendChild(node);
-            }
         }
-    }
-    function makeStylesheet(key, inner) {
-        const styleNode = document.createElement("style");
-        styleNode.type = "text/css";
-        styleNode.id = key;
-        styleNode.innerHTML = inner;
-        return styleNode;
-    }
-    function isNotRegistered(key) {
-        return document.getElementById(key) == null;
-    }
-    function add(key, inner, render = true) {
-        if (this.registry[key] === undefined) {
-            this.registry[key] = inner;
-            if (render) {
-                this.render(key);
+    },
+        this.add = (key, inner, custom = null, render = true) => {
+            if (this.registry[key] === undefined) {
+                this.registry[key] = inner;
+                if (render) {
+                    this.render(key, custom);
+                }
             }
-        }
-    }
-    function remove(key, unrender = false) {
+        };
+    this.remove = (key, unrender = false) => {
         delete this.registry[key];
-        if (unrender) {
-            document.getElementById(key).remove();
+        if (unrender && !this.isNotRendered(key)) {
+            this.getElement(key).remove();
         }
-    }
+    };
+    this.isNotRendered = (key) => {
+        return this.getElement(key) == null;
+    };
 }
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     module.exports = joro;
