@@ -9,16 +9,18 @@
 </p>
 
 ---
-# Why is this useful?
-- JSS is over complicated for small projects
-- Its easy to add styles for functional components
-- its tiny, simple functional and i love using it.
 
 # Installation
 
 ```
 npm install joro --save
 ```
+
+# Why make this?
+- JSS is over complicated for small projects
+- Its easy to add styles for functional components
+- its tiny, simple functional and i love using it.
+
 
 ## Examples
 
