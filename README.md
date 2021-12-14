@@ -1,6 +1,6 @@
 <p align="center"><img width="300px" src="docs/github-logo.png" />
 </p>
-<p align="center">In a very basic way this allows you to load dom nodes and strings like dependencies.</p>
+<p align="center">Load dom nodes and strings like dependencies with no duplicates</p>
 <hr>
 <p align="center">
 <a href="https://opensource.org/licenses/MIT">
