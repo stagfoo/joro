@@ -14,6 +14,14 @@
 - Its easy to add styles for functional components
 - its tiny, simple functional and i love using it.
 
+# Installation
+
+```
+npm install joro --save
+```
+
+## Examples
+
 ```js
 
 var html = require('nanohtml')
