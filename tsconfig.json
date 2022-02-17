@@ -8,10 +8,10 @@
     "preserveConstEnums": true,
     "sourceMap": false,
     "outDir": "./dist",
-    "strict": true
+    "strict": false
   },
   "include": [
-    "src/**/*",
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"
