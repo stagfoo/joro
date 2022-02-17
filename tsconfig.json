@@ -8,6 +8,7 @@
     "preserveConstEnums": true,
     "sourceMap": false,
     "outDir": "./dist",
+    "strict": true
   },
   "include": [
     "src/**/*",
