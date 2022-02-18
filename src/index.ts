@@ -1,6 +1,6 @@
 type CustomTag = HTMLElement | null;
 interface RegistryItem {
-  [x: string]: CustomTag
+  [x: string]: string
 }
 
 class joro {
