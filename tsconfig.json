@@ -5,10 +5,11 @@
     "target": "es6",
     "noImplicitAny": false,
     "removeComments": true,
+    "allowSyntheticDefaultImports": true,
     "preserveConstEnums": true,
     "sourceMap": false,
     "outDir": "./dist",
-    "strict": false
+    "strict": true
   },
   "include": [
     "src/**/*"
