@@ -5,6 +5,7 @@
         "es2021": true
     },
     "extends": [
+        "xo-space",
         "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
