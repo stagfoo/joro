@@ -4,7 +4,7 @@
   "description": "confirm tags are mounted in the dom",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "./node_modules/.bin/tsc",
     "demo": "serve ./demo",
     "lint": "eslint \"src/**/*.{tsx,ts}\"",
     "lint:fix": "eslint \"src/**/*.{tsx,ts}\" --fix",
@@ -43,7 +43,7 @@
     "eslint-config-xo-space": "^0.32.0",
     "pre-commit": "^1.2.2",
     "serve": "^13.0.2",
-    "tsc": "^1.20150623.0",
     "typescript": "^4.5.5"
-  }
+  },
+  "dependencies": {}
 }
