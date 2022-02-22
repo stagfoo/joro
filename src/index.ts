@@ -4,7 +4,19 @@ interface Registry {
   [x: string]: string;
 }
 
-type Joro = Function
+type Joro = {
+  new (): {
+    registry: Registry;
+    render: (_key: string, _custom: CustomTag) => boolean;
+    getElement: (_key: string) => Element | null;
+    add: (
+      _key: string,
+      _inner: string,
+      _custom: CustomTag,
+      _render: boolean
+    ) => boolean;
+  };
+}
 
 interface Window {
   joro: Joro;
