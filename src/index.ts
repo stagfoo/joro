@@ -4,8 +4,10 @@ interface Registry {
   [x: string]: string;
 }
 
+type Joro = Function
+
 interface Window {
-  joro: any;
+  joro: Joro;
 }
 
 class joro {
