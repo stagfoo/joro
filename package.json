@@ -9,7 +9,7 @@
     "demo": "serve ./demo",
     "lint": "eslint \"src/**/*.{tsx,ts}\"",
     "lint:fix": "eslint \"src/**/*.{tsx,ts}\" --fix",
-    "spellcheck": "git diff --name-only | cspell --file-list stdin"
+    "spellcheck": "cspell \"**\""
   },
   "repository": {
     "type": "git",
