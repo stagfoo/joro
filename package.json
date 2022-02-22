@@ -26,8 +26,8 @@
   "author": "stagfoo",
   "license": "ISC",
   "pre-commit": [
-    "lint:fix",
-    "spellcheck"
+    "spellcheck",
+    "lint:fix"
   ],
   "bugs": {
     "url": "https://github.com/stagfoo/joro/issues"
