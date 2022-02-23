@@ -12,7 +12,10 @@
         "workbox",
         "Fira",
         "Staatliches",
-        "unrender"
+        "unrender",
+        "pagejs"
     ],
-    "ignorePaths": ["**/node_modules/**"]
+    "ignorePaths": ["**/node_modules/**"],
+    "dictionaries": ["css"]
+
 }
