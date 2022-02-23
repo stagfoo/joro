@@ -12,9 +12,7 @@ type Add = (
   _location: 'head' | 'body',
 ) => boolean;
 
-type render =  (_key: string, _custom: CustomTag, _location: 'head' | 'body') => boolean;
-
-
+type render = (_key: string, _custom: CustomTag, _location: 'head' | 'body') => boolean;
 
 type Joro = {
   new (): {
@@ -32,8 +30,8 @@ interface Window {
 class joro {
   registry: Registry;
   getElement: (_key: string) => Element | null;
-  render: render
-  add: Add
+  render: render;
+  add: Add;
   isNotRendered: (_key: string) => boolean;
   remove: (_key: string, _unrender: boolean) => boolean;
 
@@ -41,7 +39,7 @@ class joro {
     this.registry = {};
     this.getElement = (key: string) =>
       document.querySelector(`[data-joro-id=${key}]`);
-    (this.render = (key: string, tag: CustomTag = null, location = "head") => {
+    (this.render = (key: string, tag: CustomTag = null, location = 'head') => {
       if (this.isNotRendered(key)) {
         // Get the data that should be stored in the key
         const inner: string = this.registry[key];
@@ -52,9 +50,11 @@ class joro {
           document[location].appendChild(tag);
           return true;
         }
-        console.error("ヾ( `3´)シ GET: tag is not an instanceof HTMLElement");
+
+        console.error('ヾ( `3´)シ GET: tag is not an instanceof HTMLElement');
       }
-      console.error("ヾ( `3´)シ GET: That tag is not rendered");
+
+      console.error('ヾ( `3´)シ GET: That tag is not rendered');
       return false;
     });
 
@@ -63,7 +63,7 @@ class joro {
       inner: string,
       tag: CustomTag = null,
       render = true,
-      location = "head"
+      location = 'head',
     ) => {
       if (this.registry[key] === undefined) {
         this.registry[key] = inner;
@@ -71,9 +71,10 @@ class joro {
           this.render(key, tag, location);
         }
       } else {
-        console.error("ヾ( `3´)シ ADD: That key already exists");
+        console.error('ヾ( `3´)シ ADD: That key already exists');
         return false;
       }
+
       return true;
     });
 
@@ -83,7 +84,8 @@ class joro {
         this.getElement(key)?.remove();
         return true;
       }
-      console.error("ヾ( `3´)シ REMOVE: That key is not rendered");
+
+      console.error('ヾ( `3´)シ REMOVE: That key is not rendered');
       return false;
     };
 
