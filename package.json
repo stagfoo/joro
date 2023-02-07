@@ -45,7 +45,7 @@
     "eslint-config-xo": "^0.40.0",
     "eslint-config-xo-space": "^0.32.0",
     "pre-commit": "^1.2.2",
-    "serve": "^13.0.2",
+    "serve": "^14.2.0",
     "tsm": "^2.2.1",
     "typescript": "^4.5.5",
     "uvu": "^0.5.3",
